@@ -419,7 +419,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 _gsap["default"].to('h2', {
   duration: 5,
-  x: 450
+  x: 650
 });
 
 _gsap["default"].to('#map', {

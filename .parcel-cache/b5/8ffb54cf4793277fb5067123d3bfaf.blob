@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     </head>
     <body> 
-        <h2>LEAFLET MAPA SUPER CHULI</h2>
+        <h2>LEAFLET MAPA</h2>
         <div class="map-container mapa">
             <div class="map-frame">
                 <div id="map"></div>

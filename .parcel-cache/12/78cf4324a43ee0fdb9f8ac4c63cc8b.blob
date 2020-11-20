@@ -1,0 +1,27 @@
+"use strict";
+
+var _leaflet = _interopRequireDefault(require("leaflet"));
+
+var _gsap = _interopRequireDefault(require("gsap"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+_gsap["default"].to('h2', {
+  duration: 5,
+  x: 500
+});
+
+_gsap["default"].to('#map', {
+  duration: 5,
+  x: -1820,
+  opacity: 1
+}); // Create the map
+
+
+var map = _leaflet["default"].map('map').setView([51.505, -0.09], 13);
+
+_leaflet["default"].tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+_leaflet["default"].marker([51.5, -0.09]).addTo(map).bindPopup('A pretty CSS3 popup.<br> Easily customizable.').openPopup();
