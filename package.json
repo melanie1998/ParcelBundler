@@ -8,14 +8,25 @@
     "sass": "^1.29.0"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production parcel build index.html --dist-dir dist --no-source-maps",
+    "build": "cross-env NODE_ENV=production parcel build index2.html --dist-dir dist2 --no-source-maps",
     "build-yarn": "yarn css && yarn js",
-    "prebuild": "rm -r .parcel-cache dist || exit 0",
+    "prebuild": "rm -r .parcel-cache dist || exit 0 && rm -r .parcel-cache dist2 || exit 0",
     "prebuild-yarn": "rm -rv dist",
-    "prestart": "rm -fr .parcel-cache dist",
+    "prestart": "rm -fr .parcel-cache dist && rm -fr .parcel-cache dist2",
     "start": "cross-env NODE_ENV=development parcel index.html --dist-dir dist --no-autoinstall --no-source-maps",
     "css": "sass input.scss dist/style.css",
     "js": "babel . --ignore node_modules --out-dir dist"
-    
+  },
+  "dependencies": {
+    "gsap": "^3.5.1",
+    "leaflet": "^1.7.1"
+  },
+  "alias": {
+    "leaflet": {
+      "global": "L"
+    },
+    "gsap": {
+      "global": "gsap"
+    }
   }
 }

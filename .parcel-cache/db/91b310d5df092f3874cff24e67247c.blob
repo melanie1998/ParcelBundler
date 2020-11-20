@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+body {
+  background-color: #9efff2;
+}
+body h2 {
+  color: purple;
+  margin-top: 5vh;
+  font-size: 5em;
+  font-family: "Poppins", sans-serif;
+}
+body .map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 30px;
+}
+body .map-frame {
+  margin-top: 20vh;
+  margin-left: 100vw;
+  border: 2px solid purple;
+  height: 73vh;
+  width: 90vw;
+}
+body #map {
+  height: 100%;
+  border: 2px solid purple;
+}
+@media screen and (max-width: 415px) {
+  body .map-frame {
+    margin-top: 96vh;
+    margin-left: -30.5vw;
+    border: 2px solid black;
+    height: 38vh;
+    width: 75vw;
+  }
+}
